@@ -1,3 +1,18 @@
+"""""""""""""""""""""VIM Vundle""""""""""""""""""""
+set nocompatible              " required
+filetype off                  " requirei
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim' 
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+""""""""""""""""""""END OF VUNDLE"""""""""""""""""""""
+
+
 """" Basic Behavior
 
 set number              " show line numbers
@@ -22,7 +37,6 @@ nmap k gk
 """" Vim Appearance
 
 " put colorscheme files in ~/.vim/colors/
-colorscheme seoul256      " good colorschemes: murphy, slate, molokai, badwolf, solarized
 
 " use filetype-based syntax highlighting, ftplugins, and indentation
 if has("syntax")
@@ -48,3 +62,4 @@ set hlsearch            " highlight matches
 
 " turn off search highlighting with <CR> (carriage-return)
 nnoremap <CR> :nohlsearch<CR><CR>
+
