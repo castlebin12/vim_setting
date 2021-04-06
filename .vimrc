@@ -6,7 +6,11 @@ filetype off                  " requirei
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' 
-
+Plugin 'preservim/nerdtree'
+Plugin 'preservim/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'davidhalter/jedi-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -28,7 +32,8 @@ set visualbell          " blink cursor on error, instead of beeping
 
 
 """" Key Bindings
-
+map <F1> :tab new<CR>
+map <F2> :NERDTreeToggle<CR>
 " move vertically by visual line (don't skip wrapped lines)
 nmap j gj
 nmap k gk
@@ -62,4 +67,9 @@ set hlsearch            " highlight matches
 
 " turn off search highlighting with <CR> (carriage-return)
 nnoremap <CR> :nohlsearch<CR><CR>
+
+" for vim-airline
+let g:airline#extensions#tabline#enabled = 1 " turn on buffer list
+set laststatus=2 " turn on bottom bar
+
 
