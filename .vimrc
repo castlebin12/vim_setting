@@ -11,6 +11,7 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'davidhalter/jedi-vim'
+"Plugin 'stephpy/vim-yaml'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -22,7 +23,7 @@ filetype plugin indent on    " required
 set number              " show line numbers
 set wrap                " wrap lines
 set encoding=utf-8      " set encoding to UTF-8 (default was "latin1")
-set mouse=a             " enable mouse support (might not work well on Mac OS X)
+"set mouse=a             " enable mouse support (might not work well on Mac OS X)
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw screen only when we need to
 set showmatch           " highlight matching parentheses / brackets [{()}]
@@ -42,7 +43,7 @@ nmap k gk
 """" Vim Appearance
 
 " put colorscheme files in ~/.vim/colors/
-
+set t_Co=256
 " use filetype-based syntax highlighting, ftplugins, and indentation
 if has("syntax")
  syntax on
